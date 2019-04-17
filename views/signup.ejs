@@ -1,0 +1,130 @@
+<head>
+  <meta charset="utf-8">
+  <title>Cc</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- ------------home---- -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="This is social network html5 template available in themeforest......" />
+<meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page" />
+<meta name="robots" content="index, follow" />
+<title>College Connection</title>
+
+<script src="/assets/js/uXZ0ounWv2eJEyIgYQ_QyMi0Bs8.js"></script><link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/ionicons.min.css" />
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700' rel='stylesheet' type='text/css'>
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/fav.png" />
+
+
+
+
+  <script data-cfasync="false" src="/assets/js/email-decode.min.js"></script><script src="/assets/js/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.appear.min.js"></script>
+<script src="/assets/js/jquery.incremental-counter.js"></script>
+<script src="/assets/js/script.js"></script>
+<script data-cfasync="false" src="/assets/js/email-decode.min.js"></script><script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTMXfmDn0VlqWIyoOxK8997L-amWbUPiQ&amp;callback=initMap"></script>
+<script src="/assets/js/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/script.js"></script>
+
+</head>
+
+<section id="banner">
+  <div class="container" style="padding-left: 220px; padding-right: 350px;">
+  
+  <a href="index.html" class="logo"><img src="assets/images/35.png" alt="College Connection"
+    style="padding-left: 170px; "></a>
+  <h2 class="text-white">Find My Friends</h2>
+  <div class="line-divider"></div>
+  <div class="form-wrapper">
+  <p class="signup-text" style= "color: #f1ebf3;">Signup now and meet awesome people around the Gujart</p>
+  <form method="POST" action="signup" ref='uploadForm' id='uploadForm' encType="multipart/form-data" >
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Username</label>
+  <input type="text" class="form-control" name="fname" id="example-name" placeholder="Enter name">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Gender :</label>
+  <label style= 'color: #f1ebf3;'>
+  <input type="radio" name="gender" value="Male" required=""> Male </label>
+  <label style= 'color: #f1ebf3;'><input type="radio" name="gender"  value="Female"required=""> Female </label>
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Profile</label>
+  <input type="file" class="form-control"  name="photo">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Date Of Birth</label>
+  <input type="date" class="form-control" name="date"  placeholder="Date Of Birth">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Address</label>
+  <input type="text" class="form-control" name="address" placeholder="Address">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>College Name</label>
+  <select name="college">
+    <% for(var i=0; i<College.length;i++) { %>
+        
+            <option value='<%= College[i]._id %>'> <%= College[i].college_name %> </option>
+           
+           
+        <% } %></select>
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Branch</label>
+  <select name="branch">
+    <% for(var i=0; i<branch.length;i++) { %>
+        
+            <option value='<%= branch[i]._id %>'> <%= branch[i].branch_name %> </option>
+           
+           
+        <% } %></select>
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Semester</label>
+  <select name="sem">
+    <% for(var i=0; i<sem.length;i++) { %>
+        
+            <option value='<%= sem[i]._id %>'> <%= sem[i].Sem_name %> </option>
+           
+           
+        <% } %></select>
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Area</label>
+  <input type="text" class="form-control" name="area"  placeholder="Area">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Phone Number</label>
+  <input type="Number" class="form-control" name="mobile_no"placeholder="Phone number">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Id Card</label>
+  <input type="file" class="form-control" name="i_card">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Email</label>
+  <input type="email" class="form-control" name="email" id="example-email" placeholder="Enter email">
+  </fieldset>
+  <fieldset class="form-group">
+  <label style= 'color: #f1ebf3;'>Password</label>
+  <input type="password" class="form-control" name="password" id="example-password" placeholder="Enter a password">
+  </fieldset>
+  <p style= "color: #f1ebf3;">By signning up you agree to the terms</p>
+  <button class="btn-secondary" type="submit">Signup</button>
+  </form>
+  
+  
+  </div>
+  <a href="signin" style= "color: #f1ebf3;">Already have an account?</a>
+  <img class="form-shadow" src="images/bottom-shadow.png" alt="" />
+  </div>

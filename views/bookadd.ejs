@@ -1,0 +1,45 @@
+<%- include('header.ejs'); -%>
+
+<div class=" content-area">
+    <div class="page-header">
+        <h4 class="page-title">Forms</h4>
+        
+    </div>
+    <div class="row" style="margin-left:255px;">
+        <div class="col-xl-6">
+            <div class="card m-b-20">
+                <div class="card-header">
+                    <h3 class="card-title">Book Form</h3>
+                    <div class="card-options">
+                        <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                        <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="POST"  >
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="exampleInputEmail1">Book Name</label>
+                            <input type="text" class="form-control" name="bookname" id="exampleInputname"  placeholder="Enter Book Name">
+                        </div>
+                        
+                        <div class="form-group">
+                                <label class="form-label" for="exampleInputEmail1">Price</label>
+                                <input type="text" class="form-control" name="price" id="exampleInputname"  placeholder="Enter Price">
+                        </div>
+
+                        <div class="form-group">
+                                <label class="form-label" for="exampleInputEmail1">Status</label>
+                                <input type="text" class="form-control" name="status" id="exampleInputname"  placeholder="Enter Status">
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <div class="checkbox checkbox-secondary">
+                                <button type="submit" class="btn btn-primary ">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('footer.ejs'); -%>

@@ -1,0 +1,128 @@
+<%- include('header.ejs'); -%>
+<div id="page-contents">
+    <div class="container">
+    <div class="row">
+    
+    <div class="col-md-3" style="position:static;">
+    <div class="profile-card">
+    <img src="/<%= User_array.photo %>" alt="user" class="profile-photo" />
+    <h5><a href="timeline.html" class="text-white"><%= User_array.fname %></a></h5>
+    <a href="#" class="text-white"><i class="ion ion-android-person-add"></i> 12 followers</a>
+    </div>
+    <ul class="nav-news-feed">
+        <li><i class="icon ion-ios-paper"></i><div><a href="/">My Newsfeed</a></div></li> 
+        <li><i class="icon ion-ios-people-outline"></i><div><a href="newsfeed-friend">Friends</a></div></li>
+        <li><i class="icon ion-chatboxes"></i><div><a href="message">Messages</a></div></li>
+    </ul>
+   
+    <div id="chat-block">
+    <div class="title">Chat online</div>
+
+
+    <ul class="online-users list-inline">
+            <% if(user_array.length>0) { %>
+                <% for(var i=0 ;i<user_array.length;i++) {%> 
+    <li><a href="newsfeed-messages.html" title="Linda Lohan"><img src="/<%=  user_array[i].photo%>" alt="user" class="img-responsive profile-photo" /><span class="online-dot"></span></a></li>
+    <% } %>
+    <% } else {%>
+      Not Record Found
+      <% } %>    
+</ul>
+    </div>
+   
+    </div>
+    <div class="col-md-7">
+    
+    <div class="create-post">
+    <div class="row">
+    <div class="col-md-7 col-sm-7">
+    <div class="form-group">
+    <img src="/<%= User_array.photo %>" alt="" class="profile-photo-md" />
+    <textarea name="texts" id="exampleTextarea" cols="30" rows="1" class="form-control" placeholder="Write what you wish"></textarea>
+    </div>
+    </div>
+    <div class="col-md-5 col-sm-5">
+    <div class="tools">
+    <ul class="publishing-tools list-inline">
+    <li><a href="#"><i class="ion-compose"></i></a></li>
+    <li><a href="#"><i class="ion-images"></i></a></li>
+    <li><a href="#"><i class="ion-ios-videocam"></i></a></li>
+    <li><a href="#"><i class="ion-map"></i></a></li>
+    </ul>
+    <button class="btn btn-primary pull-right">Publish</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="friend-list">
+            <div class="row">
+                    <% if(user_array.length>0) { %>
+                        <% for(var i=0 ;i<user_array.length;i++) {%>
+                <div class="col-md-6 col-sm-6">
+                <div class="friend-card">
+                <img src="assets/images/covers/3.jpg" alt="profile-cover" class="img-responsive cover" />
+                <div class="card-info">
+                <img src="/<%=  user_array[i].photo%>" alt="user" class="profile-photo-lg" />
+                <div class="friend-info">
+                <a href="show/<%= user_array[i]._id %>" class="pull-right text-green">View Profile</a>
+                <h5><a href="#" class="profile-link"><%= user_array[i].fname %></a></h5>
+                <p>Traveler</p>
+                </div>
+                </div>
+                </div>
+                </div>
+          
+                <% } %>
+    <% } else {%>
+      Not Record Found
+      <% } %>
+              
+                </div>
+    </div>
+    </div>
+    
+    <div class="col-md-2 static">
+    <div class="suggestions" id="sticky-sidebar">
+    <h4 class="grey">Who to Follow</h4>
+    <div class="follow-user">
+    <img src="assets/images/users/user-11.jpg" alt="" class="profile-photo-sm pull-left" />
+    <div>
+    <h5><a href="timeline.html">Diana Amber</a></h5>
+    <a href="#" class="text-green">Add friend</a>
+    </div>
+    </div>
+    <div class="follow-user">
+    <img src="assets/images/users/user-12.jpg" alt="" class="profile-photo-sm pull-left" />
+    <div>
+    <h5><a href="timeline.html">Cris Haris</a></h5>
+    <a href="#" class="text-green">Add friend</a>
+    </div>
+    </div>
+    <div class="follow-user">
+    <img src="assets/images/users/user-13.jpg" alt="" class="profile-photo-sm pull-left" />
+    <div>
+    <h5><a href="timeline.html">Brian Walton</a></h5>
+    <a href="#" class="text-green">Add friend</a>
+    </div>
+    </div>
+    <div class="follow-user">
+    <img src="assets/images/users/user-14.jpg" alt="" class="profile-photo-sm pull-left" />
+    <div>
+    <h5><a href="timeline.html">Olivia Steward</a></h5>
+    <a href="#" class="text-green">Add friend</a>
+    </div>
+    </div>
+    <div class="follow-user">
+    <img src="assets/images/users/user-15.jpg" alt="" class="profile-photo-sm pull-left" />
+    <div>
+    <h5><a href="timeline.html">Sophia Page</a></h5>
+    <a href="#" class="text-green">Add friend</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <%- include('footer.ejs'); -%>

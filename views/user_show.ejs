@@ -1,0 +1,107 @@
+<%- include('header.ejs'); -%>
+<html>
+    <form style="
+  
+">
+<div class="card-header" style="margin-left:150px; margin-top:100px;">
+    <h3 class="card-title">User Detail</h3>
+    <div class="card-options">
+      <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+      <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+    </div>
+  </div>
+<div class="table-responsive" style="margin-left: 150px;">
+    <table class="table mb-0" >
+        
+        <tbody >
+        
+            <tr >
+               <td >UserName</td>
+                <td>:</td>
+                <td><%= user_array.fname %></td>
+            </tr>
+            <tr>
+               <td>Gender</td>
+               <td>:</td>
+               <td> <%= user_array.gender %></td>
+            </tr>
+            <tr>
+               <td>Profile</td>
+               <td>:</td>
+               <td><img src="/<%=  user_array.photo%>" width="50" height="50"></td>
+            </tr>
+            <tr>
+               <td>Date Of Birth</td>
+               <td>:</td>
+               <td> <%= user_array.date %></td>
+            </tr>
+            <tr>
+               <td>College Name</td>
+               <td>:</td>
+               <td> <%= user_array.college.college_name %></td>
+            </tr>
+            <tr>
+               <td>Branch</td>
+               <td>:</td>
+               <td><%=  user_array.branch.branch_name%></td>
+            </tr>
+            <tr>
+               <td>Semester</td>
+               <td>:</td>
+               <td><%=  user_array.sem.Sem_name%></td>
+            </tr>
+            <tr>
+               <td>Area</td>
+               <td>:</td>
+               <td><%=  user_array.area%></td>
+            </tr>
+            <tr>
+                <td>Email_id</td>
+                <td>:</td>
+                <td><%=  user_array.email %></td>
+             </tr>
+             <tr>
+                <td>Password</td>
+                <td>:</td> 
+                <td><%=  user_array.password%></td>
+             </tr>
+             <tr>
+                <td>ID Card</td>
+                <td>:</td>
+                <td><img src="/<%=  user_array.i_card%>" width="50" height="50"></td>
+             </tr>
+            
+             <tr>
+                <td>Phone No</td>
+                <td>:</td>
+                <td><%=  user_array.mobile_no%></td>
+             </tr>
+             <tr>
+                <td>Address</td>
+                <td>:</td>
+                <td><%=  user_array.address%></td>
+             </tr>
+             <!-- <tr>
+                <td>Photo</td>
+                <td>:</td>
+                <td><img href="/<%=user_array.i_card%>"/></td>
+             </tr> -->
+             <tr>
+                 <td>
+                     <a href='edit/<%= user_array._id %>'><input type="button" value="Edit"></a>
+
+               </td>
+             </tr>
+             	
+        </tbody>
+    </table>
+</div>
+</form>
+</html>
+
+
+
+
+
+
+<%- include('footer.ejs'); -%>
