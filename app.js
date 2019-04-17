@@ -46,7 +46,7 @@ app.use('/Sem', SemRouter);
 app.use('/chat', chatRouter);
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1:27017/database3',{useNewUrlParser: true})
+mongoose.connect('mongodb+srv://urjilpatel1998:5265@cc-neckz.mongodb.net/database3?retryWrites=true',{useNewUrlParser: true})
 .then(() => console.log('connection succesful'))
 .catch((err) => console.error(err))
 // catch 404 and forward to error handler
