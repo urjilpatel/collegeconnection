@@ -20,15 +20,22 @@
 						</div>
 						
 						<div class="form-group">
-								<label class="form-label" for="exampleInputEmail1">Gender:</label>
-								<label class="form-label" for="exampleInputEmail1">
-										<input type="radio" id="exampleInputname" name="gender" value="Male"id="User_gender"required="">
-										Male
-									</label>
-									<label class="form-label" for="exampleInputEmail1">
-										<input type="radio" id="exampleInputname"name="gender"  value="Female"id="User_gender"	required="">
-										Female
-									</label>
+							<label>Gender :</label>
+							<label>
+								<% if(user_array.gender=="Male"){%>
+								<input type="radio" name="gender" value="Male"
+									class="form-check-input" checked>Male
+								<input type="radio" name="gender" value="Female"
+									class="form-check-input">Female
+							</label>
+							<label>
+								<%}else{%>
+								<input type="radio" name="gender" value="Male"
+									class="form-check-input">Male
+								<input type="radio" name="gender" value="Female"
+									class="form-check-input" checked>Female
+								<%}%>
+							</label>
 								</div>
 						
 								<div class="form-group">
@@ -40,7 +47,7 @@
 						
 						<div class="form-group">
 							<label class="form-label">Date Of Birth</label>
-							<input type="date" class="form-control"  name="date" value="<%= user_array.date %>" placeholder="number">
+						:<%= user_array.date %>" 
 						</div>
 						<div class="form-group">
 								<label class="form-label" for="exampleInputEmail1">Address</label>
@@ -50,33 +57,24 @@
 						
 						<div class="form-group">
 								<label class="form-label" for="exampleInputEmail1">College Name</label>
-								<select name="college">
-									<% for(var i=0; i<College.length;i++) { %>
+								
 										
-											<option value='<%= College[i]._id %>'> <%= College[i].college_name %> </option>
+								:-<%=  user_array.college.college_name%>
 										   
 										   
-										<% } %></select>
+										
 							</div>
 							<div class="form-group">
 									<label class="form-label" for="exampleInputEmail1">Branche</label>
-									<select name="branch">
-										<% for(var i=0; i<branch.length;i++) { %>
-											
-												<option value='<%= branch[i]._id %>'> <%= branch[i].branch_name %> </option>
+									:-<%=  user_array.branch.branch_name %>
 											   
 											   
-											<% } %></select>
+										
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="exampleInputEmail1">Sem</label>
-										<select name="sem">
-											<% for(var i=0; i<sem.length;i++) { %>
-												
-													<option value='<%= sem[i]._id%>'> <%= sem[i].Sem_name %> </option>
-												   
-												   
-												<% } %></select>
+
+										:-<%=  user_array.sem.Sem_name %>
 									</div>
 						<div class="form-group">
 								<label class="form-label" for="exampleInputEmail1">Area</label>
